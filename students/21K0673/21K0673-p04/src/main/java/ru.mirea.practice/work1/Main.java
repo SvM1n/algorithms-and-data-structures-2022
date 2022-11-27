@@ -4,7 +4,7 @@ abstract class Main {
     public static void main(String[] args) {
         String season = Seasons.SUMMER.toString();
         System.out.println(season + "\n");
-        Seasons.SUMMER.getDescription();
+        System.out.println(Seasons.SUMMER.getDescription());
         EnumTest b = new EnumTest(Seasons.SUMMER);
         b.method();
         System.out.println("\n");

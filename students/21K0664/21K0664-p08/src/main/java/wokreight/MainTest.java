@@ -69,7 +69,6 @@ abstract class MainTest {
             System.out.println("Введите число");
             int n = in.nextInt();
 
-
             //Задание 14
             System.out.println("Задание 14:");
             numberOrder(n);
@@ -77,6 +76,7 @@ abstract class MainTest {
             //Задание 15
             System.out.println("\nЗадание 15:");
             numberReverseOrder(n);
+
         } catch (InputMismatchException e) {
             System.out.println("Error");
             in.nextInt();

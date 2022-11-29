@@ -15,7 +15,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <version.junit>1.9.1</version.junit>
         <version.jupiter>5.9.1</version.jupiter>
-        <version.pmd>6.51.0</version.pmd>
+        <version.pmd>6.52.0</version.pmd>
     </properties>
 
     <scm>
@@ -40,6 +40,7 @@
         <module>students/21K0645</module>
         <module>students/21K0664</module>
         <module>students/21K0710</module>
+        <module>students/21K0708</module>
         <module>students/21K0689</module>
         <module>students/21K0637</module>
         <module>students/21K0709</module>
@@ -51,6 +52,7 @@
         <module>students/21K0478</module>
         <module>students/21K0628</module>
         <module>students/21K0627</module>
+        <module>students/21K0712</module>
         <module>p01</module>
     </modules>
 

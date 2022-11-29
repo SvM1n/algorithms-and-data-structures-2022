@@ -1,4 +1,4 @@
-package ru.mirea.worktwentytwo;
+package ru.mirea.worktwentyeight;
 
 abstract class Main {
     public static void main(String[] args) {

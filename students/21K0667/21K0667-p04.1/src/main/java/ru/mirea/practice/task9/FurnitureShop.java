@@ -8,7 +8,7 @@ public class FurnitureShop {
         try (Scanner sc = new Scanner(System.in)) {
             System.out.println("1)Стул, 2)Тумбочка, 3)Кровать");
             choice = sc.nextInt();
-            int counter = 0;
+            double counter = 0;
             switch (choice) {
                 case 1:
                     Chair[] chairs = {new Chair(3000, 1.1, false), new Chair(4000, 1.5, true)};

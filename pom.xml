@@ -27,7 +27,7 @@
     </scm>
 
     <modules>
-        <module>students/0000000</module>
+        <!--<module>students/0000000</module>
         <module>students/0000001</module>
         <module>students/21K0576</module>
         <module>students/21K0598</module>
@@ -38,19 +38,19 @@
         <module>students/21K0719</module>
         <module>students/21K0706</module>
         <module>students/21K0645</module>
-        <module>students/21K0664</module>
+        <module>students/21K0664</module>-->
         <module>students/21K0710</module>
-        <module>students/21K0689</module>
+        <!--<module>students/21K0689</module>
         <module>students/21K0637</module>
         <module>students/21K0709</module>
-        <module>students/21K0673</module>
+        <module>students/21K0673</module>-->
         <!--        <module>students/21K0654</module>-->
         <!--        <module>students/21K0618</module>-->
-        <module>students/21K0623</module>
+        <!--<module>students/21K0623</module>
         <module>students/21K0597</module>
         <module>students/21K0478</module>
         <module>students/21K0628</module>
-        <module>students/21K0627</module>
+        <module>students/21K0627</module>-->
         <module>p01</module>
     </modules>
 

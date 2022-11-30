@@ -1,4 +1,4 @@
-package ru.mirea.worksix.task1;
+package ru.mirea.worksix;
 
 class MovableCircle implements Movable {
     private MovablePoint a;

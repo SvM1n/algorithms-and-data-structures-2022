@@ -1,4 +1,4 @@
-package ru.mirea.worksix.task1;
+package ru.mirea.worksix;
 
 class MovablePoint implements Movable {
     protected int x;

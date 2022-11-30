@@ -16,5 +16,13 @@
         <module>21K0623-p01</module>
         <module>21K0623-p02</module>
         <module>21K0623-p03</module>
+        <module>21K0623-p04</module>
+        <module>21K0623-p04.1</module>
+        <module>21K0623-p06</module>
+        <module>21K0623-p07</module>
+        <module>21K0623-p08</module>
+        <module>21K0623-p09</module>
+        <module>21K0623-p10</module>
+<!--        <module>21K0623-p11</module>-->
     </modules>
 </project>

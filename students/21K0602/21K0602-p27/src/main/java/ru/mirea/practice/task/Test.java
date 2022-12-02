@@ -15,6 +15,7 @@ public abstract class Test {
         tab.hashAdd(8,"eight");
         tab.hashAdd(9,"nine");
         tab.hashAdd(10,"ten");
+        tab.hashAdd(3,"three");
         tab.hashLookup();
         System.out.println(tab.hashtableHash(3));
         tab.hashDelete(9);

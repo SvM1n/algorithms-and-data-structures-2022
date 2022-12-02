@@ -41,7 +41,8 @@ public class HashTab<K, V> {
     public void hashAdd(K key, V value) {
         for (Node<K, V> node : list) {
             if (node.hashCode() == Objects.hash(key, value)) {
-                System.out.println("Object already added");
+                System.out.println("Object " + key + ": " + value + " already added");
+                return;
             }
 
         }

@@ -13,7 +13,7 @@ public class LinkedQueue<T> extends AbstractQueue<T> implements Queue<T> {
 
     @Override
     public void enqueue(T element) {
-        Node temp = rear;
+        Node<T> temp = rear;
         rear = new Node<>(element, null);
         if (capacity == 0) {
             front = temp;

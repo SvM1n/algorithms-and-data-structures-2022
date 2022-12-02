@@ -77,6 +77,7 @@ public class ArrayQueue<T> extends AbstractQueue<T> implements Queue<T> {
         elements = new Object[startCapacity];
     }
 
+    @SuppressWarnings({"unchecked"})
     @Override
     public T element() {
         return (T) elements[front];

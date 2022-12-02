@@ -1,8 +1,11 @@
 package ru.mirea.practice.task10;
 
 public class Train extends Transport {
-    public Train(double speed, double seats) {
-        super(speed, seats);
+    protected double coupeCost;
+
+    public Train(double speed, double seats, double cost, double coupeCost) {
+        super(speed, seats, cost);
+        this.coupeCost = coupeCost;
     }
 
     @Override
@@ -11,7 +14,12 @@ public class Train extends Transport {
     }
 
     @Override
-    public double cost(double time) {
-        return time * seats * 100;
+    public double cost() {
+        return time * seats * cost + coupeCost;
+    }
+
+    @Override
+    public String toString() {
+        return "На поезде: " + this.cost();
     }
 }

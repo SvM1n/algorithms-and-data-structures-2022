@@ -1,8 +1,11 @@
 package ru.mirea.practice.task10;
 
 public class Plane extends Transport {
-    public Plane(double speed, double seats) {
-        super(speed, seats);
+    protected double businessCost;
+
+    public Plane(double speed, double seats, double cost, double businessCost) {
+        super(speed, seats, cost);
+        this.businessCost = businessCost;
     }
 
     @Override
@@ -11,7 +14,12 @@ public class Plane extends Transport {
     }
 
     @Override
-    public double cost(double time) {
-        return time * seats * 200;
+    public double cost() {
+        return time * seats * cost + businessCost;
+    }
+
+    @Override
+    public String toString() {
+        return "На самолете: " + this.cost();
     }
 }

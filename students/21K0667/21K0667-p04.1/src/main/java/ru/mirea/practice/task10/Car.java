@@ -2,8 +2,8 @@ package ru.mirea.practice.task10;
 
 public class Car extends Transport {
 
-    public Car(double speed, double seats) {
-        super(speed, seats);
+    public Car(double speed, double seats, double cost) {
+        super(speed, seats, cost);
     }
 
     @Override
@@ -12,7 +12,12 @@ public class Car extends Transport {
     }
 
     @Override
-    public double cost(double time) {
-        return time * 50 * seats;
+    public double cost() {
+        return time * cost * seats;
+    }
+
+    @Override
+    public String toString() {
+        return "На машине: " + this.cost();
     }
 }

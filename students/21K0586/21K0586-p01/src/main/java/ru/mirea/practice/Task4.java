@@ -1,10 +1,10 @@
 package ru.mirea.practice;
 
-public class task4 {
+public class Task4 {
     public static double factorial(double n){
         double s=1;
         while (n>0){
-            s*=n;
+            s=s*n;
             n--;
         }
         n=s;

@@ -2,20 +2,20 @@ package ru.mirea.practice;
 
 import java.util.Scanner;
 
-public class task2 {
+public class Task2 {
     public static void main(String[] args) {
         int n;
         int s = 0;
         Scanner c = new Scanner(System.in);
         System.out.println("Input quantity of array's numbers");
         n = c.nextInt();
-        int array[] = new int[n];//создание массива
+        int []array = new int[n];//создание массива
         System.out.println("Input array:");
         int min=array[0], max=array[0];
         s=array[0];
         int i=1;
         while (i<n){
-            s+=array[i];
+            s=s+array[i];
             if (min>array[i]){
                 min=array[i];
             }

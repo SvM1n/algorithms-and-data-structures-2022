@@ -1,6 +1,6 @@
 package ru.mirea.practice.task4;
 
-public class Calculator {
+public abstract class Calculator {
     public static <T extends Number> double sum(T number1, T number2) {
         return number1.doubleValue() + number2.doubleValue();
     }

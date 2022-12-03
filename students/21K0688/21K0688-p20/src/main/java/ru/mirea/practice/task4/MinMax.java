@@ -9,9 +9,9 @@ public class MinMax<T extends Comparable> {
 
     public T min() {
         T min = arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i].compareTo(min) < 0) {
-                min = arr[i];
+        for (T t : arr) {
+            if (t.compareTo(min) < 0) {
+                min = t;
             }
         }
         return min;

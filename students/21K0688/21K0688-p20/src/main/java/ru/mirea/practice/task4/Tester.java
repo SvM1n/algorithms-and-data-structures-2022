@@ -6,8 +6,8 @@ public abstract class Tester {
         MinMax<Integer> minMax = new MinMax<>(arr);
 
         System.out.print("Arr: ");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (Integer integer : arr) {
+            System.out.print(integer + " ");
         }
 
         System.out.print("\nMin: " + minMax.min());

@@ -1,4 +1,4 @@
-package ru.mirea.practice.n2;
+package ru.mirea.practice.n2to4;
 
 public class Person {
     private String name;

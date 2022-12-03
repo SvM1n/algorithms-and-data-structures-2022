@@ -1,4 +1,4 @@
-package ru.mirea.practice.n2;
+package ru.mirea.practice.n2to4;
 
 
 import java.util.ArrayList;

@@ -2,7 +2,7 @@ package mirea.practice.task1;
 
 import java.util.Arrays;
 
-public class ArrayQueueModule {
+public abstract class ArrayQueueModule {
     private static final int DEFAULT_SIZE = 10;
     private static Object[] array = new Object[DEFAULT_SIZE];
     private static int size = 0;

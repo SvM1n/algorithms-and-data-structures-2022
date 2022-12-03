@@ -11,7 +11,7 @@ public abstract class Calculator {
             char c = input.charAt(i);
             if (Character.isDigit(c)) {
                 StringBuilder t = new StringBuilder();
-                while (!isDelimiter(input.charAt(i)) && !isOperator(input.charAt(i))) {
+                while ("= ".indexOf(c) == -1 && "+-/*^()".indexOf(c) == -1) {
                     t.append(input.charAt(i));
                     i++;
                     if (i == input.length()) {
@@ -20,7 +20,7 @@ public abstract class Calculator {
                 }
                 tmp.push(Double.parseDouble(t.toString()));
                 i--;
-            } else if (isOperator(c)) {
+            } else if ("+-/*^()".indexOf(c) != -1) {
                 double rhs = tmp.pop();
                 double lhs = tmp.pop();
                 switch (c) {
@@ -48,15 +48,58 @@ public abstract class Calculator {
         return tmp.peek();
     }
 
-    public static Boolean isDelimiter(char c) {
-        return "= ".indexOf(c) != -1;
+    public static String getRpnExpression(String input) {
+        StringBuilder output = new StringBuilder();
+        Stack<Character> operators = new Stack<>();
+
+        for (int i = 0; i < input.length(); i++) {
+            char c = input.charAt(i);
+            if ("= ".indexOf(c) != -1) {
+                continue;
+            }
+
+            if (Character.isDigit(c)) {
+                while ("= ".indexOf(c) == -1 && "+-/*^()".indexOf(c) == -1) {
+                    output.append(input.charAt(i));
+                    i++;
+
+                    if (i == input.length()) {
+                        break;
+                    }
+                }
+
+                output.append(" ");
+                i--;
+            }
+
+            if ("+-/*^()".indexOf(c) != -1) {
+                if (c == '(') {
+                    operators.push(c);
+                } else if (c == ')') {
+                    char tmp = operators.pop();
+
+                    while (tmp != '(') {
+                        output.append(tmp).append(" ");
+                        tmp = operators.pop();
+                    }
+                } else {
+                    if (!operators.empty()) {
+                        if (getPriority(c) <= getPriority(operators.peek())) {
+                            output.append(operators.pop()).append(" ");
+                        }
+                    }
+                    operators.push(c);
+                }
+            }
+        }
+
+        while (!operators.empty()) {
+            output.append(operators.pop()).append(" ");
+        }
+        return output.toString();
     }
 
-    public static Boolean isOperator(char c) {
-        return "+-/*^()".indexOf(c) != -1;
-    }
-
-    public static int getPriority(char c) {
+    private static int getPriority(char c) {
         switch (c) {
             case '(':
                 return 0;

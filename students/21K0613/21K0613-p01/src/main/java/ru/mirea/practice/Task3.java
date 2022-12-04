@@ -1,7 +1,6 @@
-package ru.mirea.practice.s21K0613;
+package ru.mirea.practice;
 
 import java.util.Scanner;
-
 abstract class Task3 {
     public static void main(String[] args) {
         int sum = 0;
@@ -23,7 +22,6 @@ abstract class Task3 {
             array[i] = num;
             sum += num;
         }
-
         System.out.println("Сумма чисел\t" + sum + "\n" + "Среднее арифметическое\t" + String.valueOf(sum/numCount));
     }
 }

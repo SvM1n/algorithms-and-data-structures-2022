@@ -1,13 +1,12 @@
-package ru.mirea.practice.s21K0613;
+package ru.mirea.practice;
 
 import java.util.Scanner;
-
 abstract class Task4 {
     public static void main(String[] args){
         System.out.println("Введите количество чисел:\t");
         Scanner scn = new Scanner(System.in);
         int numCount = 0;
-        if(scn.hasNextInt()) {
+        if(scn.hasNextInt()){
             numCount = scn.nextInt();
         }
         int[] array = new int[numCount];
@@ -23,7 +22,6 @@ abstract class Task4 {
             sum += num;
             array[counter++] = num;
         }
-
         int min, max;
         min = max = array[0];
         for (int i = 0; i < numCount; i++){
@@ -34,11 +32,7 @@ abstract class Task4 {
                 max = array[i];
             }
         }
-
         System.out.println("Сумма чисел:\t" + sum + "\n");
         System.out.println("Максимальное число:\t" + max + "\n" + "Минимальное число:\t" + min);
-
-
-
     }
 }

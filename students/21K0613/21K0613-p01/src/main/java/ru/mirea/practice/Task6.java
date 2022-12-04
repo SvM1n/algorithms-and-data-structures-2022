@@ -1,5 +1,4 @@
-package ru.mirea.practice.s21K0613;
-
+package ru.mirea.practice;
 abstract class Task6 {
     public static void main(String[] args){
         System.out.println("1");
@@ -7,6 +6,5 @@ abstract class Task6 {
             System.out.print("1/" + i + "\t");
         }
     }
-
 }
 

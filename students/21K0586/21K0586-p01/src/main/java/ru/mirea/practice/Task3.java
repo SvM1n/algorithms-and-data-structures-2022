@@ -1,8 +1,6 @@
 package ru.mirea.practice;
 
-import java.util.Scanner;
-
-public class Task3 {
+public abstract class Task3 {
     public static void main(String[] args) {
         for (int i = 1; i <= 10; i++) {
             String str = String.format("%.2f", (double) 1 / i);

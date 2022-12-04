@@ -1,6 +1,6 @@
 package ru.mirea.practice;
 
-public class Task4 {
+public abstract class Task4 {
     public static double factorial(double n) {
         double s = 1;
         while (n > 0) {

@@ -12,15 +12,14 @@ public final class HowMany {
 
     public static void main(String[] args) throws IOException {
 
+        int counter;
         System.out.println("Enter a String: ");
 
-        String inputLine;
         try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in))) {
-            inputLine = bufferedReader.readLine();
+            String inputLine = bufferedReader.readLine();
+            counter = (int) Pattern.compile("\\w+").matcher(inputLine).results().count();
         }
 
-        int counter = (int) Pattern.compile("\\w+").matcher(inputLine).results().count();
         System.out.println(counter);
-
     }
 }

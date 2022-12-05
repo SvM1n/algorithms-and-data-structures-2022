@@ -1,16 +1,20 @@
-package ru.mirea.practice.work1;
+package ru.mirea.practice.work1to2;
 
 import java.util.Stack;
 
 public class Tree {
-    private Node node;
+    private Node root;
 
     public Tree() {
-        node = null;
+        root = null;
+    }
+
+    public Node getRoot() {
+        return root;
     }
 
     public Node findbyValue(int value) {
-        Node node = this.node;
+        Node node = this.root;
         while (node.getValue() != value) {
             if (value < node.getValue()) {
                 node = node.getLeft();
@@ -27,10 +31,10 @@ public class Tree {
     public void insert(int value) {
         Node node = new Node();
         node.setValue(value);
-        if (this.node == null) {
-            this.node = node;
+        if (this.root == null) {
+            this.root = node;
         } else {
-            Node root = this.node;
+            Node root = this.root;
             Node parent;
             while (true) {
                 parent = root;
@@ -54,8 +58,8 @@ public class Tree {
     }
 
     public boolean delete(int value) {
-        Node root = this.node;
-        Node parent = this.node;
+        Node root = this.root;
+        Node parent = this.root;
         boolean isleft = true;
         while (root.getValue() != value) {
             parent = root;
@@ -71,24 +75,24 @@ public class Tree {
             }
         }
         if (root.getLeft() == null && root.getRight() == null) {
-            if (root == this.node) {
-                this.node = null;
+            if (root == this.root) {
+                this.root = null;
             } else if (isleft) {
                 parent.setLeft(null);
             } else {
                 parent.setRight(null);
             }
         } else if (root.getRight() == null) {
-            if (root == this.node) {
-                this.node = root.getLeft();
+            if (root == this.root) {
+                this.root = root.getLeft();
             } else if (isleft) {
                 parent.setLeft(root.getLeft());
             } else {
                 parent.setRight(root.getLeft());
             }
         } else if (root.getLeft() == null) {
-            if (root == this.node) {
-                this.node = root.getRight();
+            if (root == this.root) {
+                this.root = root.getRight();
             } else if (isleft) {
                 parent.setLeft(root.getRight());
             } else {
@@ -96,8 +100,8 @@ public class Tree {
             }
         } else {
             Node heir = lookup(root);
-            if (root == this.node) {
-                this.node = heir;
+            if (root == this.root) {
+                this.root = heir;
             } else if (isleft) {
                 parent.setLeft(heir);
             } else {
@@ -125,7 +129,7 @@ public class Tree {
 
     public void print() {
         Stack globalStack = new Stack();
-        globalStack.push(node);
+        globalStack.push(root);
         int gaps = 32;
         boolean isRowEmpty = false;
         String separator = "-----------------------------------------------------------------";
@@ -166,7 +170,7 @@ public class Tree {
     public void size() {
         int amount = 0;
         Stack globalStack = new Stack();
-        globalStack.push(node);
+        globalStack.push(root);
         int gaps = 32;
         boolean isRowEmpty = false;
         while (!isRowEmpty) {
@@ -229,9 +233,9 @@ public class Tree {
         int maxWdth = 0;
         int i;
         int width = 0;
-        int h = height(this.node);
+        int h = height(this.root);
         for (i = 1; i < h; i++) {
-            width = getWidth(this.node, i);
+            width = getWidth(this.root, i);
             if (width > maxWdth) {
                 maxWdth = width;
             }

@@ -1,4 +1,4 @@
-package ru.mirea.practice.work1;
+package ru.mirea.practice.work1to2;
 
 public class Node {
     private int value;

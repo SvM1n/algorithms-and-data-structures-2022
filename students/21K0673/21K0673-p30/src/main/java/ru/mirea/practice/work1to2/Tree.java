@@ -1,5 +1,6 @@
 package ru.mirea.practice.work1to2;
 
+import java.util.Random;
 import java.util.Stack;
 
 public class Tree {
@@ -132,15 +133,13 @@ public class Tree {
         globalStack.push(root);
         int gaps = 32;
         boolean isRowEmpty = false;
-        String separator = "-----------------------------------------------------------------";
-        System.out.println(separator);
-        while (isRowEmpty == false) {
+        while (!isRowEmpty) {
             Stack localStack = new Stack();
             isRowEmpty = true;
             for (int j = 0; j < gaps; j++) {
                 System.out.print(' ');
             }
-            while (globalStack.isEmpty() == false) {
+            while (!globalStack.isEmpty()) {
                 Node temp = (Node) globalStack.pop();
                 if (temp != null) {
                     System.out.print(temp.getValue());
@@ -150,7 +149,8 @@ public class Tree {
                         isRowEmpty = false;
                     }
                 } else {
-                    System.out.print("__");
+                    Random random = new Random();
+                    System.out.print(random.nextInt(10) + " ");
                     localStack.push(null);
                     localStack.push(null);
                 }
@@ -160,11 +160,10 @@ public class Tree {
             }
             System.out.println();
             gaps /= 2;
-            while (localStack.isEmpty() == false) {
+            while (!localStack.isEmpty()) {
                 globalStack.push(localStack.pop());
             }
         }
-        System.out.println(separator);
     }
 
     public void size() {
@@ -191,7 +190,7 @@ public class Tree {
                 }
             }
             gaps /= 2;
-            while (localStack.isEmpty() == false) {
+            while (!localStack.isEmpty()) {
                 globalStack.push(localStack.pop());
             }
         }

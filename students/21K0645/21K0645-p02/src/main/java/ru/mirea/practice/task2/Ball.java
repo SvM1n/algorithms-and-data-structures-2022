@@ -16,8 +16,10 @@ public class Ball {
         this.y = y;
     }
 
+    /**
     public Ball() {
     }
+     */
 
     public double getX() {
         return x;

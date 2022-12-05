@@ -9,6 +9,7 @@ public final class TestAuthor {
     private TestAuthor() {
         throw new UnsupportedOperationException();
     }
+
     public static void main(String[] args) {
 
         Author testAuthor = new Author("Name", "email@email.com", 'm');

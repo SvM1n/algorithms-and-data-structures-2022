@@ -8,9 +8,10 @@ package ru.mirea.practice.task2;
 //написать программу. Класс Ball моделирует движущийся мяч.
 
 public final class TestBall {
-    private TestBall(){
+    private TestBall() {
         throw new UnsupportedOperationException();
     }
+
     public static void main(String[] args) {
 
         Ball testBall = new Ball(1.0, 3.0);

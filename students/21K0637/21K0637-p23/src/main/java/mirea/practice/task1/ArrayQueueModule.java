@@ -2,22 +2,25 @@ package mirea.practice.task1;
 
 import java.util.Arrays;
 
-public abstract class ArrayQueueModule {
+public class ArrayQueueModule {
     private static final int DEFAULT_SIZE = 10;
-    private static Object[] array = new Object[DEFAULT_SIZE];
-    private static int size = 0;
-    private static int head = 0;
-    private static int tail = 0;
+    private Object[] array;
+    private int size;
+    private int head;
+    private int tail;
 
-    private static void ensureCapacity(int capacity) {
-        if (capacity >= array.length) {
+    public ArrayQueueModule() {
+        this.array = new Object[DEFAULT_SIZE];
+        this.size = 0;
+        this.head = 0;
+        this.tail = 0;
+    }
+
+    private void ensureCapacity(int capacity) {
+        if (capacity >= this.array.length) {
             Object[] temp = new Object[array.length << 1];
             int count;
-            if (tail < head) {
-                count = array.length - head;
-            } else {
-                count = size;
-            }
+            count = tail < head ? array.length - head : size;
             System.arraycopy(array, head, temp, 0, count);
             if (tail < head) {
                 System.arraycopy(array, 0, temp, count, tail);
@@ -28,7 +31,7 @@ public abstract class ArrayQueueModule {
         }
     }
 
-    public static void push(Object element) {
+    public void push(Object element) {
         assert element != null;
         ensureCapacity(size + 1);
         if (head == 0) {
@@ -40,7 +43,7 @@ public abstract class ArrayQueueModule {
         size++;
     }
 
-    public static void enqueue(Object element) {
+    public void enqueue(Object element) {
         assert element != null;
         ensureCapacity(size + 1);
         array[tail] = element;
@@ -48,26 +51,26 @@ public abstract class ArrayQueueModule {
         size++;
     }
 
-    public static Object element() {
+    public Object element() {
         assert size > 0;
         return array[head];
     }
 
-    public static Object dequeue() {
+    public Object dequeue() {
         size--;
         assert size > 0;
-        Object result = element();
+        Object result = array[head];
         array[head] = null;
         head = (head + 1) % array.length;
         return result;
     }
 
-    public static Object peek() {
+    public Object peek() {
         assert size > 0;
         return array[(tail == 0) ? array.length - 1 : tail - 1];
     }
 
-    public static void clear() {
+    public void clear() {
         size = head = tail = 0;
         array = new Object[DEFAULT_SIZE];
     }

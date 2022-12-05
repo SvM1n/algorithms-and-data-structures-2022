@@ -5,7 +5,10 @@ package ru.mirea.practice.task1;
 //TestAuthor. Класс Author должен содержать реализацию методов,
 //представленных на диаграмме класса.
 
-public class TestAuthor {
+public final class TestAuthor {
+    private TestAuthor() {
+        throw new UnsupportedOperationException();
+    }
     public static void main(String[] args) {
 
         Author testAuthor = new Author("Name", "email@email.com", 'm');

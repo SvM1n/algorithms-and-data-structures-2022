@@ -35,16 +35,13 @@ public class Ball {
         this.y = y;
     }
 
-    public void move(double xDisp, double yDisp) {
-        x += xDisp;
-        y += yDisp;
+    public void move(double xdisp, double ydisp) {
+        x += xdisp;
+        y += ydisp;
     }
 
     @Override
     public String toString() {
-        return "Ball{" +
-                "x=" + x +
-                ", y=" + y +
-                '}';
+        return String.format("Ball { x=%s,  y=%s }", x, y);
     }
 }

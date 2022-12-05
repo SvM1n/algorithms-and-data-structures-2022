@@ -7,7 +7,10 @@ package ru.mirea.practice.task2;
 //представленных на UML. Диаграмма на рисунке описывает сущность Мяч
 //написать программу. Класс Ball моделирует движущийся мяч.
 
-public class TestBall {
+public final class TestBall {
+    private TestBall(){
+        throw new UnsupportedOperationException();
+    }
     public static void main(String[] args) {
 
         Ball testBall = new Ball(1.0, 3.0);

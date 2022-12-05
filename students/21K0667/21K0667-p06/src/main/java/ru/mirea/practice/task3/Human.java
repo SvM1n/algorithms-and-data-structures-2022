@@ -11,4 +11,5 @@ public class Human implements Nameable {
     public Human(String name) {
         this.name = name;
     }
+
 }

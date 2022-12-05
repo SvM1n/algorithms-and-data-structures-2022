@@ -1,4 +1,4 @@
-package ru.mirea.practice.task1.task10;
+package ru.mirea.practice.task10;
 
 import java.util.Scanner;
 

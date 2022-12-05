@@ -11,4 +11,5 @@ public class Animal implements Nameable {
     public Animal(String name) {
         this.name = name;
     }
+
 }

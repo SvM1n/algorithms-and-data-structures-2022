@@ -1,4 +1,4 @@
-package ru.mirea.practice.task1.task10;
+package ru.mirea.practice.task10;
 
 public class Computer {
     private Processor processor;
@@ -30,5 +30,6 @@ public class Computer {
                 + ", Монитор" + monitor
                 + ", Бренд:" + brand;
     }
+
 }
 

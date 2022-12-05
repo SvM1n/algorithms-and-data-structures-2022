@@ -1,4 +1,4 @@
-package ru.mirea.practice.task1.task10;
+package ru.mirea.practice.task10;
 
 public class Memory {
     private int ramCapacity;
@@ -31,4 +31,5 @@ public class Memory {
         this.hddCapacity = hddCapacity;
     }
 }
+
 

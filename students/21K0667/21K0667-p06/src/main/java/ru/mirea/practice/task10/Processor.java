@@ -1,4 +1,4 @@
-package ru.mirea.practice.task1.task10;
+package ru.mirea.practice.task10;
 
 public class Processor {
     private double frequency;
@@ -41,4 +41,5 @@ public class Processor {
         this.threads = threads;
         this.cores = cores;
     }
+
 }

@@ -40,4 +40,5 @@ public class MovablePoint implements Movable {
                 + ", xSpeed= " + xSpeed
                 + ", ySpeed= " + ySpeed;
     }
+
 }

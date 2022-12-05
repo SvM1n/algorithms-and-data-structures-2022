@@ -1,4 +1,4 @@
-package ru.mirea.practice.task1.task10;
+package ru.mirea.practice.task10;
 
 public abstract class Test {
     public static void main(String[] args) {
@@ -12,4 +12,5 @@ public abstract class Test {
         System.out.println();
         shop.printComputers();
     }
+
 }

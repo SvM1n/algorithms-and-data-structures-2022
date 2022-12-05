@@ -7,4 +7,5 @@ public abstract class Tester {
         Phone test2 = new Phone(10000, "Mi A1");
         System.out.println(test2.getPrice());
     }
+
 }

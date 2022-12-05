@@ -7,4 +7,5 @@ public abstract class Test {
         Human test2 = new Human("Mark");
         System.out.println(test2.getName());
     }
+
 }

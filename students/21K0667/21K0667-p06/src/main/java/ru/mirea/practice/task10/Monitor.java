@@ -1,4 +1,4 @@
-package ru.mirea.practice.task1.task10;
+package ru.mirea.practice.task10;
 
 public class Monitor {
     private int refreshRate;
@@ -30,5 +30,6 @@ public class Monitor {
         this.refreshRate = refreshRate;
         this.resolution = resolution;
     }
+
 }
 

@@ -17,4 +17,5 @@ public class Meat implements Priceable {
         this.type = type;
         this.price = price;
     }
+
 }

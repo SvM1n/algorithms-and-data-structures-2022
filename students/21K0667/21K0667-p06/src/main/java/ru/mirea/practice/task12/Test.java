@@ -19,6 +19,5 @@ public abstract class Test {
         System.out.println("\n" + stringBuilder.delete(0, 2));
         stringBuilder.undo();
         System.out.println(stringBuilder);
-
     }
 }

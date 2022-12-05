@@ -34,4 +34,5 @@ public class MovableCircle implements Movable {
         return "radius = " + radius
                 + ", center = " + center;
     }
+
 }

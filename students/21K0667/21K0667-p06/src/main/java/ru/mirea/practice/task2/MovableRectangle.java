@@ -44,4 +44,5 @@ public class MovableRectangle implements Movable {
         topLeft.moveRight();
 
     }
+
 }

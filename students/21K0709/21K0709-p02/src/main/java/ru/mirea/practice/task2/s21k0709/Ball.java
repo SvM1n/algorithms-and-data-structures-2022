@@ -10,6 +10,7 @@ public class Ball {
     }
 
     public Ball() {
+        // //
     }
 
     public double getX() {
@@ -34,7 +35,7 @@ public class Ball {
     }
 
     public void move(double x, double y) {
-
+        // //
     }
 
     @Override

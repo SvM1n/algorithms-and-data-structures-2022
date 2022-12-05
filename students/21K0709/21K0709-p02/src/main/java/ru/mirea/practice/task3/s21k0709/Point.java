@@ -6,9 +6,8 @@ public class Point {
 
 
     public Point() {
+        // //
     }
-
-    ;
 
     public Point(float x, float y) {
         this.x = x;

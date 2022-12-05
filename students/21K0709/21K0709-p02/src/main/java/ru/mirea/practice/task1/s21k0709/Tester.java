@@ -1,6 +1,6 @@
 package ru.mirea.practice.task1.s21k0709;
 
-public class Tester {
+public abstract class Tester {
     public static void main(String[] args) {
         Author1 c1 = new Author1("John", "dt1@mail.ru", 'm');
         System.out.println(c1);

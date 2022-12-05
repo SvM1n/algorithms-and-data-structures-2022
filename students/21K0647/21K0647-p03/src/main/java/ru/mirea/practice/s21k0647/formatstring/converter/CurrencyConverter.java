@@ -4,13 +4,13 @@ import java.text.NumberFormat;
 import java.util.Locale;
 
 public class CurrencyConverter {
-    String s;
+    double s;
     String from;
     String inlang;
     String inland;
-    String course;
+    double course;
 
-    CurrencyConverter(String s, String from, String inlang, String inland, String cource) {
+    CurrencyConverter(double s, String from, String inlang, String inland, double cource) {
         this.s = s;
         this.from = from;
         this.inlang = inlang;
@@ -19,10 +19,9 @@ public class CurrencyConverter {
     }
 
     public String formated() {
-        double n = Double.parseDouble(s);
+        Double n = s;
         Locale.setDefault(new Locale(inlang, inland));
-        double n1 = Double.parseDouble(course);
-        n = n * n1;
+        n = n * course;
         NumberFormat numberFormat1 = NumberFormat.getCurrencyInstance();
         return numberFormat1.format(n);
     }

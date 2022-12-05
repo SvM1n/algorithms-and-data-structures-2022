@@ -1,6 +1,6 @@
 package ru.mirea.practice.task2.s21k0709;
 
-public class TestBall {
+public abstract class TestBall {
     public static void main(String[] args) {
         Ball obj1 = new Ball();
         Ball obj2 = new Ball(2.5, 3.4);

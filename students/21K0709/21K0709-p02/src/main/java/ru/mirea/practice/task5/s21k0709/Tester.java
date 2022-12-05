@@ -1,6 +1,6 @@
 package ru.mirea.practice.task5.s21k0709;
 
-public  class Tester {
+public abstract class Tester {
 
     public static void main(String[] args) {
         Dog obj1 = new Dog("Barbos", 5);

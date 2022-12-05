@@ -2,15 +2,16 @@ package ru.mirea.practice.task4.s21k0709;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 public class Shop {
-    private ArrayList<String> computers = new ArrayList<String>();
+    private List<String> computers = new ArrayList<>();
 
-    public ArrayList<String> getComputers() {
+    public List<String> getComputers() {
         return computers;
     }
 
-    public void setComputers(ArrayList<String> computers) {
+    public void setComputers(List<String> computers) {
         this.computers = computers;
     }
 

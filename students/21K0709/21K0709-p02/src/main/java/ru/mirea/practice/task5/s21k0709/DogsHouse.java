@@ -1,19 +1,20 @@
 package ru.mirea.practice.task5.s21k0709;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DogsHouse {
-    private ArrayList<Dog> dogs = new ArrayList<Dog>();
+    private List<Dog> dogs = new ArrayList<>();
 
     public void addDog(Dog obj) {
         dogs.add(obj);
     }
 
-    public ArrayList<Dog> getDogs() {
+    public List<Dog> getDogs() {
         return dogs;
     }
 
-    public void setDogs(ArrayList<Dog> dogs) {
+    public void setDogs(List<Dog> dogs) {
         this.dogs = dogs;
     }
 

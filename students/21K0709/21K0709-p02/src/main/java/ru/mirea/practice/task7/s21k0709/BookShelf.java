@@ -1,9 +1,10 @@
 package ru.mirea.practice.task7.s21k0709;
 
+import java.util.List;
 import java.util.ArrayList;
 
 public class BookShelf {
-    private ArrayList<Book> books = new ArrayList<>();
+    private List<Book> books = new ArrayList<>();
     private int booksonshelf;
 
     public BookShelf(int booksonshelf) {
@@ -11,6 +12,7 @@ public class BookShelf {
     }
 
     public BookShelf() {
+        // //
     }
 
     public Book maxPublYear(BookShelf obj) {
@@ -54,11 +56,11 @@ public class BookShelf {
         return obj;
     }
 
-    public ArrayList<Book> getBooks() {
+    public List<Book> getBooks() {
         return books;
     }
 
-    public void setBooks(ArrayList<Book> books) {
+    public void setBooks(List<Book> books) {
         this.books = books;
     }
 

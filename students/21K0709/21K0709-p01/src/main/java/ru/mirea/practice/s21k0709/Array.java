@@ -1,7 +1,7 @@
 package ru.mirea.practice.s21k0709;
 
 //Первая задача 1 практической работы
-public class Array {
+public abstract class Array {
     public static void main(String[] args) {
         int[] mas = new int[10];
         int sum = 0;

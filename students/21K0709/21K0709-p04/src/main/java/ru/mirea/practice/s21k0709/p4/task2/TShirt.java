@@ -1,0 +1,19 @@
+package ru.mirea.practice.s21k0709.p4.task2;
+
+public class TShirt extends Clothes {
+    TShirt(Size size, int price, String color) {
+        this.size = size;
+        this.price = price;
+        this.color = color;
+    }
+
+    @Override
+    public void dressWomen() {
+        System.out.println("TShirt Size: " + this.size + ", Sum " + this.price + ", Color " + this.color);
+    }
+
+    @Override
+    public void dressMan() {
+        System.out.println("TShirt Size: " + this.size + ", Sum " + this.price + ", Color " + this.color);
+    }
+}

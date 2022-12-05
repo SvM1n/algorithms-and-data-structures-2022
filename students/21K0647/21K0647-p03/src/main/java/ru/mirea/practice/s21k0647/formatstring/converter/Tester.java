@@ -14,7 +14,7 @@ public final class Tester {
             System.out.println("In language code");
             System.out.println("In land code");
             System.out.println("Exchange rate from currency to currency");
-            CurrencyConverter app = new CurrencyConverter(sc.nextLine(), sc.nextLine(), sc.nextLine(), sc.nextLine(), sc.nextLine());
+            CurrencyConverter app = new CurrencyConverter(sc.nextDouble(), sc.next(), sc.next(), sc.next(), sc.nextDouble());
             app.formated();
             System.out.print(app);
         }

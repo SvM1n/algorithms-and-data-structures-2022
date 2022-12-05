@@ -7,6 +7,7 @@ public class Circle {
     private String color;
 
     public Circle() {
+        // //
     }
 
     public Circle(double x, double y, double r, String color) {

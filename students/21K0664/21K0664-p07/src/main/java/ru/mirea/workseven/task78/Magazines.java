@@ -3,7 +3,6 @@ package ru.mirea.workseven.task78;
 public class Magazines implements Printable {
     private String name;
 
-
     public Magazines(String name) {
         this.name = name;
     }

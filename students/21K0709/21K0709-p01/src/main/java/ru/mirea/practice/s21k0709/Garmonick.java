@@ -1,7 +1,7 @@
 package ru.mirea.practice.s21k0709;
 
 //Четвертая задача 1 практической работы
-public class Garmonick {
+public abstract class Garmonick {
     public static void main(String[] args) {
         double sum = 0;
         for (int i = 1; i < 11; i++) {

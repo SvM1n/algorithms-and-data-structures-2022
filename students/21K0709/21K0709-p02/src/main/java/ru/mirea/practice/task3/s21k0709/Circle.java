@@ -6,6 +6,7 @@ public class Circle {
     private Point p = new Point();
 
     public Circle() {
+        // //
     }
 
     public Circle(Point p, double r) {

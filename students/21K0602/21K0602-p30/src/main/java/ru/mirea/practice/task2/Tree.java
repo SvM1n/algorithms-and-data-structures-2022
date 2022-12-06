@@ -24,7 +24,7 @@ public class Tree implements Comparable<Tree> {
 
 
     @Override
-    public int compareTo(@NotNull Tree o) {
+    public int compareTo(Tree o) {
         return o.weight - weight;
     }
 

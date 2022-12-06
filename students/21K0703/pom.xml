@@ -8,16 +8,11 @@
         <version>2022.1</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
-    <artifactId>21K0628</artifactId>
+    <artifactId>21K0703</artifactId>
     <packaging>pom</packaging>
-    <description>Практические работы Ким Инессы</description>
+    <description>Практические работы Смирягина Вадима</description>
 
     <modules>
-        <module>21K0628-p01</module>
-        <module>21K0628-p02</module>
-        <module>21K0628-p03</module>
-        <module>21K0628-p04</module>
-        <module>21K0628-p04.1</module>
-        <module>21K0628-p05</module>
+        <module>21K0703-p01</module>
     </modules>
 </project>

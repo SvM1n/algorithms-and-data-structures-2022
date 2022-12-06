@@ -2,7 +2,7 @@ package ru.mirea.practice.work1to2;
 
 
 public class HuffmanTree {
-    private final byte SIZE = 127;
+    private byte size = 127;
     private String string;
     private Tree tree;
     private int[] arr;
@@ -10,10 +10,10 @@ public class HuffmanTree {
 
     public HuffmanTree(String string, Tree tree) {
         this.string = string;
-        arr = new int[SIZE];
+        arr = new int[size];
         fillFrequenceArray();
         this.tree = tree;
-        strings = new String[SIZE];
+        strings = new String[size];
         fillEncodingArray(tree.getRoot(), "", "");
     }
 
@@ -47,7 +47,7 @@ public class HuffmanTree {
     public void displayEncodingArray() {
         fillEncodingArray(tree.getRoot(), "", "");
         System.out.println("======================Encoding table====================");
-        for (int i = 0; i < SIZE; i++) {
+        for (int i = 0; i < size; i++) {
             if (arr[i] != 0) {
                 System.out.print((char) i + " ");
                 System.out.println(strings[i]);

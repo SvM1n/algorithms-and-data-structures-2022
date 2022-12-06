@@ -6,20 +6,19 @@ import java.util.Map;
 
 public class Maping<K, V> {
     Map<String, ArrayList<String>> map;
-    private int size = 0;
 
     public Map<String, ArrayList<String>> createMap() {
         map = new HashMap<>();
-        addValue("Голубев", "Андрей");
-        addValue("Голубев", "Борис");
-        addValue("Корсунов", "Вадим");
-        addValue("Корсунов", "Вадим");
-        addValue("Лойко", "Дмитрий");
-        addValue("Муратов", "Дмитрий");
-        addValue("Николенко", "Елисей");
-        addValue("Орешников", "Женя");
-        addValue("Корсунов", "Зина");
-        addValue("Петухов", "Ваня");
+        addValue("Соколов", "Егор");
+        addValue("Петров", "Михаил");
+        addValue("Сеницин", "Георгий");
+        addValue("Воробьёв", "Егор");
+        addValue("Зайцев", "Георгий");
+        addValue("Сеницин", "Георгий");
+        addValue("Мудко", "Азамат");
+        addValue("Путин", "Семён");
+        addValue("Горбунько", "Сергей");
+        addValue("Николаенко", "Михаил");
         return map;
     }
 
@@ -36,51 +35,27 @@ public class Maping<K, V> {
             list.add(value);
         }
         map.put(key, list);
-        size++;
-    }
-
-    public int getSize() {
-        return size;
     }
 
     public int getSameFirstNameCount() {
         int amount = 0;
-        ArrayList<Object> list = new ArrayList<>(getSize());
-        for (int j = 0; j < map.size(); j++) {
-            ArrayList<Object> buff = (ArrayList<Object>) map.values().toArray()[j];
-            list.addAll(buff);
-        }
-        for (int i = 0; i < list.size(); i++) {
-            for (int j = i + 1; j < list.size(); j++) {
-                if (list.get(i).toString().charAt(0) > list.get(j).toString().charAt(0)) {
-                    Object object = list.get(i);
-                    list.set(i, list.get(j));
-                    list.set(j, object);
+        for (int i = 0; i < map.values().toArray().length; i++) {
+            for (int j = i + 1; j < map.values().toArray().length; j++) {
+                ArrayList<Object> list1 = (ArrayList<Object>) map.values().toArray()[i];
+                ArrayList<Object> list2 = (ArrayList<Object>) map.values().toArray()[j];
+                if (list1.size() == 1 & list2.size() == 1) {
+                    if (map.values().toArray()[i].equals(map.values().toArray()[j])) {
+                        amount += 2;
+                    }
+                } else {
+                    for (int k = 0; k < list1.size(); k++) {
+                        for (int z = k + 1; z < list2.size(); z++) {
+                            if (list1.get(k).equals(list2.get(z))) {
+                                amount += 2;
+                            }
+                        }
+                    }
                 }
-            }
-        }
-        boolean buff = false;
-        for (int i = 0; i < list.size(); i++) {
-            for (int j = i + 1; j < list.size(); j++) {
-                if (list.get(i).equals(list.get(j))) {
-                    amount++;
-                    buff = true;
-                } else if (buff) {
-                    buff = false;
-                    i = j;
-                    amount++;
-                }
-            }
-        }
-        return amount;
-    }
-
-    public int getSameLastNameCount() {
-        int amount = 0;
-        for (int i = 0; i < map.size(); i++) {
-            ArrayList<Object> buff = (ArrayList<Object>) map.values().toArray()[i];
-            if (buff.size() > 1) {
-                amount += buff.size();
             }
         }
         return amount;

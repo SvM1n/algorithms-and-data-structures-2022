@@ -2,7 +2,7 @@ package ru.mirea.practice.work1;
 
 import java.util.Random;
 
-public class Graph {
+abstract class Graph {
     public static void main(String[] args) {
         Random random = new Random();
         int vertexCount = random.nextInt(101);

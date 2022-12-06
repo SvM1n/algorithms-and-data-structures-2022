@@ -1,12 +1,12 @@
-package ru.mirea.practice.task1;
+package ru.mirea.practice.task2;
 
 
-public class LoopList<T> {
+public class DoubleLinkedList<T> {
     private Node<T> head;
 
     private Node<T> tail;
 
-    public LoopList() {
+    public DoubleLinkedList() {
         head = null;
         tail = null;
     }
@@ -19,14 +19,11 @@ public class LoopList<T> {
         Node<T> node = new Node<>(value, null, null);
         if (isEmpty()) {
             head = node;
-        } else {
-            tail.next = node;
-
         }
         node.previous = tail;
         tail = node;
-        tail.next = head;
-        head.previous = tail;
+        tail.next = null;
+        head.previous = null;
 
     }
 
@@ -39,8 +36,6 @@ public class LoopList<T> {
                 tail = null;
             } else {
                 head = head.next;
-                tail.next = head; //добавил так как без этого у меня элемент не удалялся а просто становился последним
-                // элементом списка
             }
             return value;
         } else {

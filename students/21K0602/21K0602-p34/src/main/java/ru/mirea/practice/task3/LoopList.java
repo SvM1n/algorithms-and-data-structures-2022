@@ -1,4 +1,6 @@
-package ru.mirea.practice.task1;
+package ru.mirea.practice.task3;
+
+
 
 
 public class LoopList<T> {
@@ -39,8 +41,7 @@ public class LoopList<T> {
                 tail = null;
             } else {
                 head = head.next;
-                tail.next = head; //добавил так как без этого у меня элемент не удалялся а просто становился последним
-                // элементом списка
+                tail.next = head;
             }
             return value;
         } else {

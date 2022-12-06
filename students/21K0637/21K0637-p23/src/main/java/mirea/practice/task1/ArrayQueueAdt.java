@@ -16,86 +16,86 @@ public class ArrayQueueAdt {
         this.tail = 0;
     }
 
-    private static void ensureCapacity(ArrayQueueAdt adt, int capacity) {
-        if (capacity >= adt.array.length) {
-            Object[] temp = new Object[adt.array.length << 1];
+    private void ensureCapacity(int capacity) {
+        if (capacity >= array.length) {
+            Object[] temp = new Object[array.length << 1];
             int count;
-            if (adt.tail < adt.head) {
-                count = adt.array.length - adt.head;
+            if (tail < head) {
+                count = array.length - head;
             } else {
-                count = adt.size;
+                count = size;
             }
-            System.arraycopy(adt.array, adt.head, temp, 0, count);
-            if (adt.tail < adt.head) {
-                System.arraycopy(adt.array, 0, temp, count, adt.tail);
+            System.arraycopy(array, head, temp, 0, count);
+            if (tail < head) {
+                System.arraycopy(array, 0, temp, count, tail);
             }
-            adt.array = temp;
-            adt.head = 0;
-            adt.tail = adt.size;
+            array = temp;
+            head = 0;
+            tail = size;
         }
     }
 
-    public static void enqueue(ArrayQueueAdt adt, Object element) {
+    public void enqueue(Object element) {
         assert element != null;
-        ensureCapacity(adt, adt.size + 1);
-        adt.array[adt.tail] = element;
-        adt.tail = (adt.tail + 1) % adt.array.length;
-        adt.size++;
+        ensureCapacity(size + 1);
+        array[tail] = element;
+        tail = (tail + 1) % array.length;
+        size++;
     }
 
-    public static Object element(ArrayQueueAdt adt) {
-        assert adt.size > 0;
-        return adt.array[adt.head];
+    public Object element() {
+        assert size > 0;
+        return array[head];
     }
 
-    public static Object dequeue(ArrayQueueAdt adt) {
-        assert adt.size > 0;
-        adt.size--;
-        Object result = element(adt);
-        adt.array[adt.head] = null;
-        adt.head = (adt.head + 1) % adt.array.length;
+    public Object dequeue() {
+        assert size > 0;
+        size--;
+        Object result = element();
+        array[head] = null;
+        head = (head + 1) % array.length;
         return result;
     }
 
-    public static void push(ArrayQueueAdt adt, Object element) {
+    public void push(Object element) {
         assert element != null;
-        ensureCapacity(adt, adt.size + 1);
-        if (adt.head == 0) {
-            adt.head = adt.array.length - 1;
+        ensureCapacity(size + 1);
+        if (head == 0) {
+            head = array.length - 1;
         } else {
-            adt.head--;
+            head--;
         }
-        adt.array[adt.head] = element;
-        adt.size++;
+        array[head] = element;
+        size++;
     }
 
-    public static Object peek(ArrayQueueAdt adt) {
-        assert adt.size > 0;
-        return adt.array[(adt.tail == 0) ? adt.array.length - 1 : adt.tail - 1];
+    public Object peek() {
+        assert size > 0;
+        return array[(tail == 0) ? array.length - 1 : tail - 1];
     }
 
-    public static Object remove(ArrayQueueAdt adt) {
+    public Object remove(ArrayQueueAdt adt) {
         assert adt.size > 0;
         adt.size--;
-        Object result = peek(adt);
+        Object result = peek();
         adt.tail = (adt.tail == 0) ? adt.array.length - 1 : adt.tail - 1;
         adt.array[adt.tail] = null;
         return result;
     }
 
-    public static int size(ArrayQueueAdt adt) {
-        return adt.size;
+    public int size() {
+        return size;
     }
 
-    public static boolean isEmpty(ArrayQueueAdt adt) {
-        return adt.size == 0;
+    public boolean isEmpty() {
+        return size == 0;
     }
 
-    public static void clear(ArrayQueueAdt adt) {
-        adt.size = 0;
-        adt.head = 0;
-        adt.tail = 0;
-        adt.array = new Object[DEFAULT_SIZE];
+    public void clear() {
+        size = 0;
+        head = 0;
+        tail = 0;
+        array = new Object[DEFAULT_SIZE];
     }
 
     @Override

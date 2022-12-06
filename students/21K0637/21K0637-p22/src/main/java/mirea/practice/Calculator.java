@@ -3,18 +3,28 @@ package mirea.practice;
 import java.util.Stack;
 
 public class Calculator {
-    public double calculate(String input) {
+    private String expression;
+
+    public Calculator(String expression) {
+        this.expression = expression;
+    }
+
+    public void setExpression(String expression) {
+        this.expression = expression;
+    }
+
+    public double calculate() {
         double result = 0;
         Stack<Double> tmp = new Stack<>();
 
-        for (int i = 0; i < input.length(); i++) {
-            char c = input.charAt(i);
+        for (int i = 0; i < expression.length(); i++) {
+            char c = expression.charAt(i);
             if (Character.isDigit(c)) {
                 StringBuilder t = new StringBuilder();
                 while ("= ".indexOf(c) == -1 && "+-/*^()".indexOf(c) == -1) {
-                    t.append(input.charAt(i));
+                    t.append(expression.charAt(i));
                     i++;
-                    if (i == input.length()) {
+                    if (i == expression.length()) {
                         break;
                     }
                 }
@@ -48,22 +58,22 @@ public class Calculator {
         return tmp.peek();
     }
 
-    public String getRpnExpression(String input) {
+    public String getRpnExpression() {
         StringBuilder output = new StringBuilder();
         Stack<Character> operators = new Stack<>();
 
-        for (int i = 0; i < input.length(); i++) {
-            char c = input.charAt(i);
+        for (int i = 0; i < expression.length(); i++) {
+            char c = expression.charAt(i);
             if ("= ".indexOf(c) != -1) {
                 continue;
             }
 
             if (Character.isDigit(c)) {
                 while ("= ".indexOf(c) == -1 && "+-/*^()".indexOf(c) == -1) {
-                    output.append(input.charAt(i));
+                    output.append(expression.charAt(i));
                     i++;
 
-                    if (i == input.length()) {
+                    if (i == expression.length()) {
                         break;
                     }
                 }

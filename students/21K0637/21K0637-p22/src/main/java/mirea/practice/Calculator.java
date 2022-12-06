@@ -2,8 +2,8 @@ package mirea.practice;
 
 import java.util.Stack;
 
-public abstract class Calculator {
-    public static double calculate(String input) {
+public class Calculator {
+    public double calculate(String input) {
         double result = 0;
         Stack<Double> tmp = new Stack<>();
 
@@ -48,7 +48,7 @@ public abstract class Calculator {
         return tmp.peek();
     }
 
-    public static String getRpnExpression(String input) {
+    public String getRpnExpression(String input) {
         StringBuilder output = new StringBuilder();
         Stack<Character> operators = new Stack<>();
 
@@ -99,7 +99,7 @@ public abstract class Calculator {
         return output.toString();
     }
 
-    private static int getPriority(char c) {
+    private int getPriority(char c) {
         switch (c) {
             case '(':
                 return 0;

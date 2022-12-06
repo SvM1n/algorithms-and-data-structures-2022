@@ -1,5 +1,8 @@
 package ru.mirea.practice.task3;
 
+/*Напишите программу HowMany.java, которая определит, сколько
+ слов Вы ввели с консоли*/
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

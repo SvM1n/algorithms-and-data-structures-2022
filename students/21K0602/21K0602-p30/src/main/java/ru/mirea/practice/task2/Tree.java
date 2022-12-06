@@ -1,8 +1,6 @@
 package ru.mirea.practice.task2;
 
 
-import org.jetbrains.annotations.NotNull;
-
 public class Tree implements Comparable<Tree> {
 
     int weight;

@@ -1,7 +1,7 @@
 package ru.mirea.practice.task10;
 
 public class Train extends Vehicle {
-
+    private final double fuelCost;
 
     @Override
     public double time(double distance) {
@@ -10,10 +10,11 @@ public class Train extends Vehicle {
 
     @Override
     public double cost() {
-        return cost * seats;
+        return cost * seats + fuelCost;
     }
 
-    public Train(double speed, double cost, double seats) {
+    public Train(double speed, double cost, double seats, double fuelCost) {
         super(speed, cost, seats);
+        this.fuelCost = fuelCost;
     }
 }

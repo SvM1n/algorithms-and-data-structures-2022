@@ -1,11 +1,11 @@
 package ru.mirea.practice.task10;
 
 public class Plane extends Vehicle {
-
+    private final double businessCost;
 
     @Override
     public double cost() {
-        return cost * seats;
+        return cost * seats * businessCost;
     }
 
     @Override
@@ -13,7 +13,8 @@ public class Plane extends Vehicle {
         return distance / speed;
     }
 
-    public Plane(double speed, double cost, double seats) {
+    public Plane(double speed, double cost, double seats, double businessCost) {
         super(speed, cost, seats);
+        this.businessCost = businessCost;
     }
 }

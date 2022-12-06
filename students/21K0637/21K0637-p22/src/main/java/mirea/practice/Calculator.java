@@ -3,34 +3,53 @@ package mirea.practice;
 import java.util.Stack;
 
 public class Calculator {
+    private String rpnExpression;
     private String expression;
 
     public Calculator(String expression) {
         this.expression = expression;
+        reversePolishNotation();
+    }
+
+    public static Boolean isDelimiter(char c) {
+        return "= ".indexOf(c) != -1;
+    }
+
+    public static Boolean isOperator(char c) {
+        return "+-/*^()".indexOf(c) != -1;
+    }
+
+    public String getExpression() {
+        return expression;
     }
 
     public void setExpression(String expression) {
         this.expression = expression;
+        reversePolishNotation();
+    }
+
+    public String getRpnExpression() {
+        return rpnExpression;
     }
 
     public double calculate() {
         double result = 0;
         Stack<Double> tmp = new Stack<>();
 
-        for (int i = 0; i < expression.length(); i++) {
-            char c = expression.charAt(i);
+        for (int i = 0; i < rpnExpression.length(); i++) {
+            char c = rpnExpression.charAt(i);
             if (Character.isDigit(c)) {
                 StringBuilder t = new StringBuilder();
-                while ("= ".indexOf(c) == -1 && "+-/*^()".indexOf(c) == -1) {
-                    t.append(expression.charAt(i));
+                while (!isDelimiter(rpnExpression.charAt(i)) && !isOperator(rpnExpression.charAt(i))) {
+                    t.append(rpnExpression.charAt(i));
                     i++;
-                    if (i == expression.length()) {
+                    if (i == rpnExpression.length()) {
                         break;
                     }
                 }
                 tmp.push(Double.parseDouble(t.toString()));
                 i--;
-            } else if ("+-/*^()".indexOf(c) != -1) {
+            } else if (isOperator(rpnExpression.charAt(i))) {
                 double rhs = tmp.pop();
                 double lhs = tmp.pop();
                 switch (c) {
@@ -58,18 +77,18 @@ public class Calculator {
         return tmp.peek();
     }
 
-    public String getRpnExpression() {
+    public void reversePolishNotation() {
         StringBuilder output = new StringBuilder();
         Stack<Character> operators = new Stack<>();
 
         for (int i = 0; i < expression.length(); i++) {
             char c = expression.charAt(i);
-            if ("= ".indexOf(c) != -1) {
+            if (isDelimiter(c)) {
                 continue;
             }
 
             if (Character.isDigit(c)) {
-                while ("= ".indexOf(c) == -1 && "+-/*^()".indexOf(c) == -1) {
+                while (!isDelimiter(expression.charAt(i)) && !isOperator(expression.charAt(i))) {
                     output.append(expression.charAt(i));
                     i++;
 
@@ -82,7 +101,7 @@ public class Calculator {
                 i--;
             }
 
-            if ("+-/*^()".indexOf(c) != -1) {
+            if (isOperator(c)) {
                 if (c == '(') {
                     operators.push(c);
                 } else if (c == ')') {
@@ -106,7 +125,7 @@ public class Calculator {
         while (!operators.empty()) {
             output.append(operators.pop()).append(" ");
         }
-        return output.toString();
+        rpnExpression = output.toString();
     }
 
     private int getPriority(char c) {

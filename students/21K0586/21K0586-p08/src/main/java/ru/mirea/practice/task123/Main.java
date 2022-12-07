@@ -1,6 +1,6 @@
 package ru.mirea.practice.task123;
 
-public class Main {
+public abstract class Main {
     public static void main(String[] args) {
         Triangular triangular = new Triangular();
         triangular.getFirstN(10);

@@ -1,14 +1,18 @@
 package ru.mirea.practice.tasks123;
-public class SortingStudentsByGPA {
+
+public abstract class Sortingstudentsbygpa {
     public static void quickSortgrade(Student[] array, int low, int high) {
-        if (array.length == 0)
+        if (array.length == 0) {
             return;
-        if (low >= high)
+        }
+        if (low >= high) {
             return;
+        }
 
         int middle = low + (high - low) / 2;
         Student opora = array[middle];
-        int i = low, j = high;
+        int i = low;
+        int j = high;
         while (i <= j) {
             while (array[i].grade(opora)) {
                 i++;
@@ -18,7 +22,7 @@ public class SortingStudentsByGPA {
                 j--;
             }
 
-            if (i <= j) {//меняем местами
+            if (i <= j) { //меняем местами
                 Student temp = array[i];
                 array[i] = array[j];
                 array[j] = temp;
@@ -27,14 +31,16 @@ public class SortingStudentsByGPA {
             }
         }
 
-        if (low < j)
+        if (low < j) {
             quickSortgrade(array, low, j);
+        }
 
-        if (high > i)
+        if (high > i) {
             quickSortgrade(array, i, high);
+        }
     }
 
-    public static void insertionSortgrade(Student sortArr[]) {
+    public static void insertionSortgrade(Student[] sortArr) {
         int j;
         //сортировку начинаем со второго элемента, т.к. считается, что первый элемент уже отсортирован
         for (int i = 1; i < sortArr.length; i++) {
@@ -49,14 +55,16 @@ public class SortingStudentsByGPA {
     }
 
     public static void quickSortcourse(Student[] array, int low, int high) {
-        if (array.length == 0)
+        if (array.length == 0) {
             return;
-        if (low >= high)
+        }
+        if (low >= high) {
             return;
-
+        }
         int middle = low + (high - low) / 2;
         Student opora = array[middle];
-        int i = low, j = high;
+        int i = low;
+        int j = high;
         while (i <= j) {
             while (array[i].course(opora)) {
                 i++;
@@ -66,7 +74,7 @@ public class SortingStudentsByGPA {
                 j--;
             }
 
-            if (i <= j) {//меняем местами
+            if (i <= j) { //меняем местами
                 Student temp = array[i];
                 array[i] = array[j];
                 array[j] = temp;
@@ -75,14 +83,16 @@ public class SortingStudentsByGPA {
             }
         }
 
-        if (low < j)
+        if (low < j) {
             quickSortgrade(array, low, j);
+        }
 
-        if (high > i)
+        if (high > i) {
             quickSortcourse(array, i, high);
+        }
     }
 
-    public static void insertionSortcourse(Student sortArr[]) {
+    public static void insertionSortcourse(Student[] sortArr) {
         int j;
         //сортировку начинаем со второго элемента, т.к. считается, что первый элемент уже отсортирован
         for (int i = 1; i < sortArr.length; i++) {

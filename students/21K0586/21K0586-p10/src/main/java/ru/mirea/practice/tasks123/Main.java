@@ -1,13 +1,10 @@
 package ru.mirea.practice.tasks123;
 
-public class Main {
-    public static void main(String[] args) {
+public abstract class Main {
 
-    }
-    public  static Student[] iDNumber;
-    public static void setidNumber(Student[] students){
-        for (int i=0;i< students.length;i++){
-           iDNumber[i]=students[i];
-        }
+    public static Student[] iDNumber;
+
+    public static void setidNumber(Student[] students) {
+        System.arraycopy(students, 0, iDNumber, 0, students.length);
     }
 }

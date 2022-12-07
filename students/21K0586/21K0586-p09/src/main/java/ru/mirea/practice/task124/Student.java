@@ -16,6 +16,7 @@ public class Student implements Comparator {
         this.score = 0;
     }
 
+    @Override
     public String toString() {
         return this.name + "has score of " + this.score;
     }
@@ -26,10 +27,7 @@ public class Student implements Comparator {
     }
 
     public boolean isLess(Student student) {
-        if (this.score < student.score) {
-            return true;
-        }
-        return false;
+        return this.score < student.score;
     }
 
     public boolean isLess2(Student student) {

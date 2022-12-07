@@ -6,7 +6,7 @@ public class Square extends Rectangle {
     public Square(double width, String color, boolean filled) {
         this.width = width;
         super.color = color;
-        super.filled = isFilled();
+        this.filled = filled;
     }
 
     @Override
@@ -29,32 +29,34 @@ public class Square extends Rectangle {
         return "type is square";
     }
 
+    @Override
     public double getWidth() {
         return width;
     }
 
+    @Override
     public void setWidth(double width) {
         this.width = width;
     }
 
     @Override
     public boolean isFilled() {
-        return super.isFilled();
+        return filled;
     }
 
     @Override
     public String getColor() {
-        return super.getColor();
+        return color;
     }
 
     @Override
     public void setColor(String color) {
-        super.setColor(color);
+        this.color = color;
     }
 
     @Override
     public void setFilled(boolean filled) {
-        super.setFilled(filled);
+        this.filled = filled;
     }
 
 }

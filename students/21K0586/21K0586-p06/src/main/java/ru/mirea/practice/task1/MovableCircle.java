@@ -3,7 +3,6 @@ package ru.mirea.practice.task1;
 public class MovableCircle implements Movable {
     private int radius;
     private MovablePoint center;
-    private final double price = 100;
 
     MovableCircle(int radius, MovablePoint center) {
         this.center = center;

@@ -1,18 +1,19 @@
 package ru.mirea.practice.task1;
 
 public class Rectangle extends Shape {
-    private double hight;
+    private double height;
     private double width;
 
-    public Rectangle(double hight, double width, String color, boolean isFilled) {
-        this.hight = hight;
+    public Rectangle(double height, double width, String color, boolean isFilled) {
+        this.height = height;
         this.width = width;
         super.color = color;
         super.filled = isFilled;
     }
 
     public Rectangle() {
-
+        this.height = 0;
+        this.width = 0;
     }
 
     @Override
@@ -22,27 +23,27 @@ public class Rectangle extends Shape {
 
     @Override
     public double getPerimeter() {
-        return (this.hight + this.width) * 2;
+        return (this.height + this.width) * 2;
     }
 
     @Override
     public double getArea() {
-        return this.hight * this.width;
+        return this.height * this.width;
     }
 
     @Override
     public String toString() {
-        return "rectangle" + this.hight + "x" + this.width;
+        return "rectangle" + this.height + "x" + this.width;
     }
 
     @Override
     public void setFilled(boolean filled) {
-        super.setFilled(filled);
+        this.filled = filled;
     }
 
     @Override
     public void setColor(String color) {
-        super.setColor(color);
+        this.color = color;
     }
 
     public void setWidth(double width) {
@@ -55,20 +56,20 @@ public class Rectangle extends Shape {
 
     @Override
     public String getColor() {
-        return super.getColor();
+        return this.color;
     }
 
     @Override
     public boolean isFilled() {
-        return super.isFilled();
+        return this.filled;
     }
 
     public double getHight() {
-        return hight;
+        return height;
     }
 
     public void setHight(double hight) {
-        this.hight = hight;
+        this.height = hight;
     }
 
 }

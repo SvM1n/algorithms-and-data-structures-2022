@@ -13,50 +13,43 @@ public class Circle extends Shape {
         super.filled = filled;
     }
 
-    public String toString() {
-        return "Circle with radius " + r;
-    }
 
     @Override
-    public double getArea() {
-        return 3.14 * this.r * this.r;
-    }
-
-    @Override
-    public double getPerimeter() {
-        return 2 * 3.14 * this.r;
-    }
-
-    @Override
-    public String getType() {
-        return "type is circle";
-    }
-
-    public double getR() {
-        return r;
-    }
-
-    public void setR(double r) {
-        this.r = r;
+    public void setColor(String color) {
+        this.color = color;
     }
 
     @Override
     public boolean isFilled() {
-        return super.isFilled();
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
-    }
-
-    @Override
-    public void setColor(String color) {
-        super.setColor(color);
+        return this.filled;
     }
 
     @Override
     public void setFilled(boolean filled) {
-        super.setFilled(filled);
+        this.filled = filled;
+    }
+
+
+    public double getRadius() {
+        return this.r;
+    }
+
+    public void setRadius(double r) {
+        this.r = r;
+    }
+
+    @Override
+    public double getArea() {
+        return 3.14 * r * r;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return 2 * 3.14 * r;
+    }
+
+    @Override
+    public String toString() {
+        return "Circle:{Radius = " + r + ", Area = " + (3.14 * r * r) + ", Perimeter = " + (2 * 3.14 * r) + "}";
     }
 }

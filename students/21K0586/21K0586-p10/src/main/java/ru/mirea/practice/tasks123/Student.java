@@ -1,4 +1,5 @@
 package ru.mirea.practice.tasks123;
+
 public class Student {
     private String name;
     private String surname;
@@ -6,13 +7,14 @@ public class Student {
     private String speciality;
     private int course;
     private double grade;
-    Student(String name,String surname,String group,int course,String speciality,double grade){
-        this.name=name;
-        this.surname=surname;
-        this.group=group;
-        this.course=course;
-        this.speciality=speciality;
-        this.grade=grade;
+
+    Student(String name, String surname, String group, int course, String speciality, double grade) {
+        this.name = name;
+        this.surname = surname;
+        this.group = group;
+        this.course = course;
+        this.speciality = speciality;
+        this.grade = grade;
     }
 
     public void setName(String name) {
@@ -25,11 +27,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", group='" + group + '\'' +
-                '}';
+        return "Student{" + "name='" + name + '\'' + ", surname='" + surname + '\'' + ", group='" + group + '\'' + '}';
     }
 
     public String getGroup() {
@@ -48,10 +46,15 @@ public class Student {
         this.surname = surname;
     }
 
-    public boolean grade(Student student){
-        return student.grade<this.grade;
+    public boolean grade(Student student) {
+        return student.grade < this.grade;
     }
-    public boolean course(Student student){
-        return  student.course<this.course;
+
+    public boolean course(Student student) {
+        return student.course < this.course;
+    }
+
+    public String getSpeciality() {
+        return speciality;
     }
 }

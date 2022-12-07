@@ -14,6 +14,7 @@ public class Person {
         this.age = age;
     }
 
+    @Override
     public String toString() {
         return "person " + this.fullname + " is " + this.age + " y.o.";
     }

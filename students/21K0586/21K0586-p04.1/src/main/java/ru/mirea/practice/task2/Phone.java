@@ -36,9 +36,9 @@ public class Phone {
         System.out.println(name + " is calling as " + number);
     }
 
-    public void sendMessage(int number[]) {
-        for (int i = 0; i < number.length; i++) {
-            System.out.println("message was sent to " + number[i]);
+    public void sendMessage(int[] number) {
+        for (int j : number) {
+            System.out.println("message was sent to " + j);
         }
     }
 

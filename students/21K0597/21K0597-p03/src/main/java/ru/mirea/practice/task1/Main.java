@@ -3,11 +3,12 @@ package ru.mirea.practice.task1;
 import java.util.Random;
 
 abstract class Main {
-    public static void show(double[] array){
-        for (double a : array){
+    public static void show(double[] array) {
+        for (double a : array) {
             System.out.print(a + " ");
         }
     }
+
     public static void bubbleSort(double[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = 0; j < array.length - i - 1; j++) {
@@ -24,10 +25,10 @@ abstract class Main {
         double[] arr1 = new double[10];
         double[] arr2 = new double[10];
         Random rand = new Random();
-        for (int i = 0; i<arr1.length; i++){
+        for (int i = 0; i < arr1.length; i++) {
             arr1[i] = Math.random();
         }
-        for (int i = 0; i<arr2.length; i++){
+        for (int i = 0; i < arr2.length; i++) {
             arr2[i] = rand.nextDouble();
         }
         System.out.print("first array: ");

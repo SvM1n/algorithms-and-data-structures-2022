@@ -3,7 +3,7 @@ package mirea.practice.task3;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Main {
+public abstract class Main {
     public static void main(String[] args) {
         Map<Float, Integer> myMap = new HashMap<>();
 

@@ -8,12 +8,12 @@
         <version>2022.1</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
-    <artifactId>sample</artifactId>
+    <artifactId>21K0589</artifactId>
     <packaging>pom</packaging>
-    <description>Волков практическая работа!</description>
+    <description>Практические работы Волкова Максима</description>
 
     <modules>
         <module>21K0589-p01</module>
-        <!--        <module>sample-p02</module> -->
+        <!-- <module>21K0589-p02</module> -->
     </modules>
 </project>

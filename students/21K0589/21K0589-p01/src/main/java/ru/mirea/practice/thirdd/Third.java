@@ -1,4 +1,4 @@
-package ru.mirea.practice.third;
+package ru.mirea.practice.thirdd;
 
 abstract class Third {
     public static void main(String[] args) {

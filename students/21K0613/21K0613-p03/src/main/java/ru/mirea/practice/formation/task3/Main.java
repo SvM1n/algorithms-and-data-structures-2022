@@ -6,9 +6,9 @@ abstract class Main {
         Employee employee1 = new Employee("Gustavo Fring", 3200.765);
         Employee employee2 = new Employee("Jessie Pinkman", 45950.760);
         Employee employee3 = new Employee("Walter White", 67890.561);
-        array[1] = employee1;
-        array[2] = employee2;
-        array[3] = employee3;
+        array[0] = employee1;
+        array[1] = employee2;
+        array[2] = employee3;
 
         Report.generateReport(array);
     }

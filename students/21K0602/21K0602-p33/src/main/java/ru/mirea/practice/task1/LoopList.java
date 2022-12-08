@@ -39,6 +39,8 @@ public class LoopList<T> {
                 tail = null;
             } else {
                 head = head.next;
+                tail.next = head; //добавил так как без этого у меня элемент не удалялся а просто становился последним
+                // элементом списка
             }
             return value;
         } else {

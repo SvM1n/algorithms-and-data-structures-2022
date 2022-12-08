@@ -4,7 +4,8 @@ public abstract class Tester {
     public static void main(String[] args) {
         ThrowsDemo throwsDemo = new ThrowsDemo();
         throwsDemo.printMessage(null);
-        throwsDemo.printMessage("qwerty");
+        throwsDemo.printMessage("abcdefg");
         throwsDemo.printMessage("12345");
+        throwsDemo.printMessage("532");
     }
 }

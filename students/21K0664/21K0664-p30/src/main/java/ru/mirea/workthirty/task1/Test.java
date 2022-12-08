@@ -39,13 +39,12 @@ public abstract class Test {
             System.out.println();
             in.close();
 
-            Scanner file;
-            file = new Scanner(new File(fileName));
-            while (file.hasNextLine()) {
-                line = file.nextLine();
+
+            in = new Scanner(new File(fileName));
+            while (in.hasNextLine()) {
+                line = in.nextLine();
                 input.add(line);
             }
-            file.close();
 
             System.out.println(input.size());
             for (String cur : input) {

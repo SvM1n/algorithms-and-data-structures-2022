@@ -50,6 +50,9 @@ public abstract class Shape {
 
     @Override
     public String toString() {
-        return "Shape{color='%s',  filled=%s}".formatted(color, filled);
+        return "Shape{"
+                + "color='" + color + '\''
+                + ",  filled=" + filled
+                + '}';
     }
 }

@@ -41,6 +41,10 @@ public class Circle extends Shape {
 
     @Override
     public String toString() {
-        return "Circle{radius=%s,  color='%s',  filled=%s}".formatted(radius, color, filled);
+        return "Circle{"
+                + "radius=" + radius
+                + ",  color='" + color + '\''
+                + ",  filled=" + filled
+                + '}';
     }
 }

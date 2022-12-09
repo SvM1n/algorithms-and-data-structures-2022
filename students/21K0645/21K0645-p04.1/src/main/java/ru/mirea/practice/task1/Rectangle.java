@@ -61,6 +61,11 @@ public class Rectangle extends Shape {
 
     @Override
     public String toString() {
-        return "Rectangle{width=%s, length=%s, color='%s', filled=%s}".formatted(width, length, color, filled);
+        return "Rectangle{"
+                + "width=" + width
+                + ",  length=" + length
+                + ",  color='" + color + '\''
+                + ",  filled=" + filled
+                + '}';
     }
 }

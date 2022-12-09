@@ -42,6 +42,6 @@ public class Square extends Rectangle {
 
     @Override
     public String toString() {
-        return "Square{side=%s, color='%s', filled=%s}".formatted(side, color, filled);
+        return "Square{" + "side=" + side + ",  width=" + width + ",  length=" + length + ",  color='" + color + '\'' + ",  filled=" + filled + '}';
     }
 }

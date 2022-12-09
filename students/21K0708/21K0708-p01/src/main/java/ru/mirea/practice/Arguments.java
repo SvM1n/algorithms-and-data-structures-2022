@@ -1,13 +1,11 @@
 package ru.mirea.practice;
 
-import org.jetbrains.annotations.NotNull;
-
 public final class Arguments {
 
     private Arguments() {
     }
 
-    public static void main(String @NotNull [] args) {
+    public static void main(String [] args) {
         for (String arg : args) {
             System.out.println(arg);
         }

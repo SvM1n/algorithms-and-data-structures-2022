@@ -8,6 +8,6 @@
         <version>2022.1</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>21k0645-p02</artifactId>
-    <description>Вторая практическая</description>
+    <artifactId>21k0645-p04.1</artifactId>
+    <description>Пятая практическая</description>
 </project>

@@ -4,8 +4,6 @@ package ru.mirea.practice.task3;
 fullname, salary.
  */
 
-import java.util.Objects;
-
 public class Employee {
     private String fullname;
     private double salary;

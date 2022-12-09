@@ -7,9 +7,13 @@ package ru.mire.practice.task1;
 интерфейс Movable; */
 
 public interface Movable {
+
     void moveUp();
+
     void moveDown();
+
     void moveLeft();
+
     void moveRight();
 
 }

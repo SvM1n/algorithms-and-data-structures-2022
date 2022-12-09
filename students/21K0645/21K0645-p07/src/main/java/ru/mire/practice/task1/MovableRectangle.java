@@ -30,16 +30,19 @@ public class MovableRectangle implements Movable {
         bottomRight.moveUp();
         topLeft.moveUp();
     }
+
     @Override
     public void moveDown() {
         bottomRight.moveDown();
         topLeft.moveDown();
     }
+
     @Override
     public void moveLeft() {
         bottomRight.moveLeft();
         topLeft.moveLeft();
     }
+
     @Override
     public void moveRight() {
         bottomRight.moveRight();

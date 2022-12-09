@@ -15,7 +15,7 @@ import java.util.List;
 
 public final class TestReport {
 
-    private TestReport(){
+    private TestReport() {
     }
 
     public static void main(String[] args) {

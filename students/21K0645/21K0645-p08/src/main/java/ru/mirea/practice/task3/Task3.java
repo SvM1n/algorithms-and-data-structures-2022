@@ -10,7 +10,8 @@ import java.util.Scanner;
 
 public final class Task3 {
 
-    private Task3(){}
+    private Task3() {
+    }
 
     public static int recursionFunc() {
         try (Scanner in = new Scanner(System.in)) {

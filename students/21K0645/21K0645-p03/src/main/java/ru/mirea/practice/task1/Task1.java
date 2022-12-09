@@ -7,7 +7,7 @@ package ru.mirea.practice.task1;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
-public final class Task1{
+public final class Task1 {
 
     private Task1() {
     }
@@ -27,7 +27,7 @@ public final class Task1{
             }
         }
 
-        if (isAscending){
+        if (isAscending) {
             System.out.println("This array is a strictly ascending sequence");
         } else {
             System.out.println("This array is not a strictly ascending sequence");

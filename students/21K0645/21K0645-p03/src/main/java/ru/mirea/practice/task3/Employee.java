@@ -33,8 +33,12 @@ public class Employee {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Employee employee)) return false;
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Employee employee)) {
+            return false;
+        }
         return Double.compare(employee.salary, salary) == 0 && Objects.equals(fullname, employee.fullname);
     }
 

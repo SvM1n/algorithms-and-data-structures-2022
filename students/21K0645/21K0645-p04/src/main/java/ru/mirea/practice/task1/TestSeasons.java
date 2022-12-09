@@ -20,7 +20,7 @@ public final class TestSeasons {
     private TestSeasons() {
     }
 
-    private static void ilike(Seasons seasons){
+    private static void ilike(Seasons seasons) {
 
         System.out.print("I like ");
 
@@ -37,9 +37,12 @@ public final class TestSeasons {
             case Autumn -> {
                 System.out.println("autumn");
             }
+            default -> {
+                System.out.println();
+            }
         }
-
     }
+
     public static void main(String[] args) {
 
         Seasons summer = Seasons.Summer;
@@ -51,7 +54,6 @@ public final class TestSeasons {
             System.out.println(season.getInfo());
         }
     }
-
 
 
 }

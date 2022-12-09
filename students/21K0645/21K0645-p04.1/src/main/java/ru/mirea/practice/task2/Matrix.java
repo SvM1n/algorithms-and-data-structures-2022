@@ -2,7 +2,7 @@ package ru.mirea.practice.task2;
 
 /*  Создать класс Матрица. Класс должен иметь следующие поля: 1)
 двумерный массив вещественных чисел; 2) количество строк и столбцов в матрице.
-    Класс	 должен иметь следующие методы: 1) сложение с другой матрицей;
+Класс должен иметь следующие методы: 1) сложение с другой матрицей;
 2) умножение на число; 3) вывод на печать; 4) умножение матриц - по желанию. */
 
 import java.util.Arrays;
@@ -77,7 +77,7 @@ public class Matrix {
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        for (double[] line: matrix){
+        for (double[] line : matrix) {
             stringBuilder.append(Arrays.toString(line));
             stringBuilder.append("\n");
         }

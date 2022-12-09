@@ -4,7 +4,7 @@ import java.text.MessageFormat;
 
 public enum Seasons {
 
-    Winter("This season is cold" ,-10),
+    Winter("This season is cold", -10),
     Spring("This season id warm", 11),
     Summer("This season id hot", 22) {
         @Override

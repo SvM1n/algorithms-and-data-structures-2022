@@ -16,15 +16,15 @@ public abstract class Vehicle {
         this.seats = seats;
     }
 
-    public double getSeats(){
+    public double getSeats() {
         return seats;
     }
 
-    public double shippingTime(double shippingLengths){
+    public double shippingTime(double shippingLengths) {
         return shippingLengths / speed;
     }
 
-    public double shippingCost(double shippingLengths){
+    public double shippingCost(double shippingLengths) {
         return shippingLengths / speed * cost;
     }
 

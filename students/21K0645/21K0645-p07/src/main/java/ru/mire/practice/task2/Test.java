@@ -12,7 +12,7 @@ public abstract class Test {
         MathCalculable mathFunc = new MathFunc();
 
         System.out.println(mathFunc.abs(-3));
-        System.out.println(mathFunc.pow(2, 4) );
+        System.out.println(mathFunc.pow(2, 4));
         System.out.println(mathFunc.circlePerimeter(5));
 
     }

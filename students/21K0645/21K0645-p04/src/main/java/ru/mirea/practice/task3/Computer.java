@@ -6,10 +6,6 @@ package ru.mirea.practice.task3;
 каждого класса. Для названий марок компьютера используйте перечисления
 (enum) */
 
-enum Brand {
-    Apple, Huawei, Asus, DELL
-}
-
 public class Computer {
 
     private Brand brand;
@@ -90,66 +86,3 @@ public class Computer {
     }
 }
 
-class Processor{
-    private final double frequency;
-    private final int numberOfCores;
-
-    public Processor(double frequency, int numberOfCores) {
-        this.frequency = frequency;
-        this.numberOfCores = numberOfCores;
-    }
-
-    public double getFrequency() {
-        return frequency;
-    }
-
-    public int getNumberOfCores() {
-        return numberOfCores;
-    }
-
-    @Override
-    public String toString() {
-        return "Processor{"
-                + "frequency=" + frequency
-                + ",  numberOfCores=" + numberOfCores
-                + '}';
-    }
-}
-
-class Memory{
-    private final int storage;
-
-    public Memory(int storage) {
-        this.storage = storage;
-    }
-
-    public int getStorage() {
-        return storage;
-    }
-
-    @Override
-    public String toString() {
-        return "Memory{"
-                + "storage=" + storage
-                + '}';
-    }
-}
-
-class Monitor{
-    private final double screenArea;
-
-    public Monitor(double screenArea) {
-        this.screenArea = screenArea;
-    }
-
-    public double getScreenArea() {
-        return screenArea;
-    }
-
-    @Override
-    public String toString() {
-        return "Monitor{"
-                + "screenArea=" + screenArea
-                + '}';
-    }
-}

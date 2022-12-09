@@ -10,17 +10,18 @@ import java.util.List;
 
 public final class Report {
 
-    private Report(){
+    private Report() {
     }
 
     public static String generateReport(List<Employee> employees) {
 
-        Formatter formatter = new Formatter();
+        try (Formatter formatter = new Formatter()) {
 
-        for (Employee employee : employees) {
-            formatter.format("%s : %.2f %n", employee.getFullname(), employee.getSalary());
+            for (Employee employee : employees) {
+                formatter.format("%s : %.2f %n", employee.getFullname(), employee.getSalary());
+            }
+
+            return formatter.toString();
         }
-
-        return formatter.toString();
     }
 }

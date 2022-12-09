@@ -8,9 +8,10 @@ package ru.mirea.practice.task1;
 
 public final class Task1 {
 
-    private Task1(){}
+    private Task1() {
+    }
 
-    private static void recursionFunc(int number){
+    private static void recursionFunc(int number) {
         if (number > 0) {
             System.out.println(number % 10);
             recursionFunc(number / 10);

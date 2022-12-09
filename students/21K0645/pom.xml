@@ -11,7 +11,6 @@
     <artifactId>21k0645</artifactId>
     <packaging>pom</packaging>
     <description>Практические работы Кулебякина Павла</description>
-
     <modules>
         <module>21K0645-p01</module>
         <module>21K0645-p02</module>

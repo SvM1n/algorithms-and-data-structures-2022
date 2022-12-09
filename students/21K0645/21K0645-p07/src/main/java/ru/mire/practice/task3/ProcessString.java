@@ -14,6 +14,7 @@ public class ProcessString implements Processable {
     public ProcessString() {
         string = "";
     }
+
     public ProcessString(String str) {
         this.string = str;
     }

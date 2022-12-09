@@ -25,21 +25,20 @@ public final class TestSeasons {
         System.out.print("I like ");
 
         switch (seasons) {
-            case Winter -> {
+            case Winter :
                 System.out.println("winter");
-            }
-            case Spring -> {
+                break;
+            case Spring :
                 System.out.println("spring");
-            }
-            case Summer -> {
+                break;
+            case Summer :
                 System.out.println("summer");
-            }
-            case Autumn -> {
+                break;
+            case Autumn :
                 System.out.println("autumn");
-            }
-            default -> {
-                System.out.println();
-            }
+                break;
+            default :
+                break;
         }
     }
 

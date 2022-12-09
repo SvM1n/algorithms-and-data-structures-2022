@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>ru.mirea.practice</groupId>
+        <artifactId>algorithms-and-data-structures</artifactId>
+        <version>2022.1</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+
+    <groupId>ru.mirea.practice</groupId>
+    <artifactId>21K0607</artifactId>
+    <packaging>pom</packaging>
+    <description>Практические работы Железняков Родион КВБО-03-21</description>
+    <version>2022.1</version>
+
+    <modules>
+        <module>21K0607-p01</module>
+        <module>21K0607-p02</module>
+        <module>21K0607-p03</module>
+        <module>21K0607-p04</module>
+    </modules>
+
+    
+</project>

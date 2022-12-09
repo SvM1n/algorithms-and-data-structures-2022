@@ -34,6 +34,10 @@
         <module>21K0637-p24</module>
         <module>21K0637-p26</module>
         <module>21K0637-p27</module>
-        <!--<module>21K0637-p28</module>-->
+        <module>21K0637-p28</module>
+        <module>21K0637-p29</module>
+        <module>21K0637-p30.1</module>
+        <module>21K0637-p30.2</module>
+        <!--<module>21K0637-p31</module>-->
     </modules>
 </project>

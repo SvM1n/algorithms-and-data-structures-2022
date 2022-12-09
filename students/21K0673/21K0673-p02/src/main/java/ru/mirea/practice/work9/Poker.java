@@ -17,7 +17,7 @@ abstract class Poker {
                 String[][] players = new String[n][5];
                 for (int i = 0; i < n; i++) {
                     for (int j = 0; j < 5; j++) {
-                        int a = ThreadLocalRandom.current().nextInt(0, 12 + 1);
+                        int a = ThreadLocalRandom.current().nextInt(0, 13);
                         players[i][j] = cards[a];
                         System.out.println(players[i][j]);
                     }

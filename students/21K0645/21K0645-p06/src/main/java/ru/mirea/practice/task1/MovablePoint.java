@@ -1,5 +1,8 @@
 package ru.mirea.practice.task1;
 
+/* Напишите два класса MovablePoint и MovableCircle - которые
+реализуют интерфейс Movable */
+
 public class MovablePoint implements Movable {
     protected int x;
     protected int y;

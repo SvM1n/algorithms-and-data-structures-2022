@@ -1,7 +1,7 @@
 package ru.mirea.practice.task1;
 
 public enum Season {
-    SUMMER("(SummerDescription)", +30){
+    SUMMER("(SummerDescription)", +30) {
         @Override
         public String getDescription() {
             return "тёплое время года";
@@ -13,7 +13,7 @@ public enum Season {
 
     private int temp = 0;
 
-    private Season(String description, int temp) {
+    Season(String description, int temp) {
         this.temp = temp;
     }
 
@@ -21,7 +21,7 @@ public enum Season {
         return temp;
     }
 
-    public String getDescription(){
+    public String getDescription() {
         return "холодное время года";
     }
 }

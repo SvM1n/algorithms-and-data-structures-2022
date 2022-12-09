@@ -3,8 +3,8 @@ package ru.mirea.practice.task1;
 abstract class Main {
 
 
-    public void seasons(Season season){
-        switch(season){
+    public void seasons(Season season) {
+        switch (season) {
             case SPRING:
                 System.out.println("i like spring");
                 break;
@@ -17,14 +17,16 @@ abstract class Main {
             case AUTUMN:
                 System.out.println("i like autumn");
                 break;
+            default:
+                break;
         }
     }
 
-    public void main(String[] args){
+    public void main(String[] args) {
         Season season = Season.SUMMER;
         seasons(season);
 
-        for(Season iterator : Season.values()){
+        for (Season iterator : Season.values()) {
             System.out.println(iterator.name() + iterator);
         }
 
